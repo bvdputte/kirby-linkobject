@@ -1,0 +1,26 @@
+label: Link
+type: linkobject
+required: true
+fields:
+  link:
+    type: link
+    label: Link
+    required: true
+  haslinktext:
+    type: toggle
+    label: Use custom link text
+    default: true
+    width: 1/4
+  linktext:
+    type: text
+    label: Link text
+    required: true
+    width: 3/4
+    when:
+      haslinktext: true
+  openInNewWindow:
+    type: toggle
+    label: Open in new window
+  classes:
+    type: text
+    label: Classes
