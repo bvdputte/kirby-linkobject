@@ -2,8 +2,9 @@
     <?php
         // Check if link is page, and if it still exists or is accessible
         if ($linkObject->linkType() == 'page') {
+            $destination = page($linkObjectFields->link()->value());
             if (
-                (!$destination = page($linkObjectFields->link()->value())) ||
+                (!$destination) ||
                 (!$destination->exists()) ||
                 (!$destination->isListed())
             ) { return; }
